@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build ./project_ecomm Odebamike/static-site:v1
+      run: docker build ./project_ecomm/ Odebamike/static-site:v1
     - name: Push to Dockerhub
       run: docker push Odebamike/static-site:v1
     
