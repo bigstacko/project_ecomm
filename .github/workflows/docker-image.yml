@@ -16,5 +16,5 @@ jobs:
       - name: Build Image
         run: docker build -t static .
       - name: push image
-        run: docker push stacko/static
+        run: docker push stacko/static:latest
       
