@@ -1,0 +1,22 @@
+name: Build and push image to dockerhub
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Image
+        run: docker build -t static .
+      - name: docker tag
+        run: docker tag static:latest stacko/static
+      - name: push image
+        run: docker push stacko/static:latest
+      
