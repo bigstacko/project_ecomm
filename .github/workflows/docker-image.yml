@@ -19,5 +19,5 @@ jobs:
         run: docker tag static:latest stacko/static
       - name: push image
         run: |
-        docker login -u stacko -p ${{ secrets.DOCKER_HUB_TOKEN }}
-        docker push stacko/static:latest
+             docker login -u stacko -p ${{ secrets.DOCKER_HUB_TOKEN }}
+             docker push stacko/static:latest
